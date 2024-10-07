@@ -34,34 +34,35 @@ updateSlide();
 // Select elements
 const clientCards = document.querySelectorAll(".client-card");
 const navButtons = document.querySelectorAll(".nav-button");
-const stepCount = document.querySelector(".step-count");
+const stepCount = document.querySelector(".client-count");
 
 let currentIndex = 0;
+const totalCards = clientCards.length;
 
-// Function to update active client card and step count
 function updateActiveCard() {
-  // Remove active class from all cards
+  // Remove the 'active' class from all cards
   clientCards.forEach((card) => card.classList.remove("active"));
-
-  // Add active class to current card
+  // Add the 'active' class to the current card
   clientCards[currentIndex].classList.add("active");
 
-  // Update step count
-  stepCount.textContent = `0${currentIndex + 1} / 05`;
+  // Update the step count with a formatted string
+  stepCount.textContent = `0${currentIndex + 1} \u00a0 / \u00a0 0${totalCards}`;
+
+  // Debugging log to confirm the update is happening
+  console.log(`Current card: ${currentIndex + 1} of ${totalCards}`);
 }
 
-// Event listeners for navigation buttons
+// Event listener for left navigation button
 navButtons[0].addEventListener("click", () => {
-  // Navigate left
-  currentIndex = currentIndex === 0 ? clientCards.length - 1 : currentIndex - 1;
+  currentIndex = currentIndex === 0 ? totalCards - 1 : currentIndex - 1;
   updateActiveCard();
 });
 
+// Event listener for right navigation button
 navButtons[1].addEventListener("click", () => {
-  // Navigate right
-  currentIndex = currentIndex === clientCards.length - 1 ? 0 : currentIndex + 1;
+  currentIndex = currentIndex === totalCards - 1 ? 0 : currentIndex + 1;
   updateActiveCard();
 });
 
-// Initialize first card as active
+// Initialize the first card as active
 updateActiveCard();
