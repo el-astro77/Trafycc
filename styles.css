@@ -15,11 +15,12 @@ body {
 
 h1 {
   font-weight: bold;
+  font-size: 45px;
   margin-bottom: 30px;
 }
 
 p {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .btn {
@@ -95,10 +96,11 @@ nav {
 
   .hero-title {
     max-width: 450px;
+    font-size: 45px;
   }
 
   .hero-desc {
-    max-width: 350px;
+    max-width: 400px;
   }
 
   .learn-more-btn {
@@ -115,115 +117,190 @@ nav {
   .learn-more-btn:hover {
     background-color: transparent;
   }
+
+  .hero-icon {
+    position: absolute;
+    top: 85px;
+    right: 0;
+    overflow: hidden;
+
+    .hero-img {
+      width: 900px;
+      object-fit: cover;
+      object-position: left;
+      z-index: 0;
+    }
+  }
 }
 
-.card-container {
-  position: relative;
-  max-width: 800px;
-  margin-bottom: 100px;
+.how-to-start {
+  margin-top: 250px;
 
-  .card {
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    border-radius: 20px;
-    padding: 50px;
-    width: 950px;
-    height: 380px;
+  .slider-container {
+    .slide {
+      display: none;
+    }
+
+    .slide.active {
+      display: block;
+    }
+  }
+
+  .card-container {
     position: relative;
+    max-width: 800px;
+    margin-bottom: 100px;
     z-index: 1;
-  }
 
-  .step-no {
-    color: #4052e4;
-    font-size: 12px;
-    margin-bottom: 10px;
-  }
+    .card {
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      border-radius: 20px;
+      padding: 50px;
+      width: 950px;
+      height: 380px;
+      position: relative;
+      z-index: 1;
 
-  .step-title {
-    color: #28588f;
-    width: 500px;
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 20px;
-  }
+      .step-icon-container {
+        display: flex;
+        gap: 100px;
 
-  .step-desc {
-    color: #28588f;
-    width: 390px;
-    font-size: 14px;
-    font-weight: 400;
-  }
+        .icon {
+          img {
+            position: absolute;
+            z-index: 1;
+          }
 
-  .read-more {
-    background-color: #ff6b35;
-    color: white;
-    font-weight: 600;
-    padding: 15px 30px;
-    border-radius: 0 0 20px 20px;
-    position: absolute;
-    margin-top: -30px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+          .step-1-img {
+            top: 20px;
+            right: 20px;
+            width: 400px;
+          }
 
-  .read-more-btn {
-    background-color: transparent;
-    color: #fff;
-    margin-left: 30px;
-    font-weight: 600;
-    padding: 0;
-  }
+          .step-2-img {
+            top: 10px;
+            right: 40px;
+            width: 400px;
+          }
 
-  .bottom-layer {
-    background-color: #4055d4;
-    position: absolute;
-    top: 60px;
-    bottom: 20px;
-    left: 120px;
-    border-radius: 20px;
-    padding: 50px;
-    width: 1050px;
-    height: 380px;
-    z-index: 0;
+          .step-3-img {
+            top: 15px;
+            right: 20px;
+            width: 400px;
+          }
 
-    .up-arrow {
-      cursor: pointer;
-      position: absolute;
-      right: 105px;
-      width: 30px;
-      opacity: 0.6;
+          .step-4-img {
+            top: 10px;
+            right: 40px;
+            width: 360px;
+          }
+        }
+      }
     }
 
-    hr {
-      color: #000838;
-      position: absolute;
-      top: 115px;
-      right: 55px;
-      width: 120px;
-      border-width: 3px;
+    .step-no {
+      color: #4052e4;
+      font-size: 12px;
+      margin-bottom: 10px;
     }
 
-    .down-arrow {
-      cursor: pointer;
-      position: absolute;
-      top: 170px;
-      right: 88px;
+    .step-title {
+      color: #28588f;
+      width: 500px;
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 20px;
     }
 
-    .step-count {
+    .step-desc {
+      color: #28588f;
+      width: 390px;
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .read-more {
+      background-color: #ff6b35;
       color: white;
-      font-size: 16px;
-      font-weight: bold;
+      font-weight: 600;
+      padding: 15px 30px;
+      border-radius: 0 0 20px 20px;
       position: absolute;
-      top: 270px;
-      right: 80px;
+      margin-top: -30px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
 
-      span {
-        font-weight: normal;
-        opacity: 0.5;
+    .read-more-btn {
+      background-color: transparent;
+      color: #fff;
+      margin-left: 30px;
+      font-weight: 600;
+      padding: 0;
+    }
+
+    .bottom-layer {
+      background-color: #4055d4;
+      position: absolute;
+      top: 60px;
+      bottom: 20px;
+      left: 120px;
+      border-radius: 20px;
+      padding: 50px;
+      width: 1050px;
+      height: 380px;
+      z-index: 0;
+
+      button {
+        background-color: #fff;
+        border: none;
+        border-radius: 50%;
+        padding: 10px;
+        cursor: pointer;
+        margin: 10px 0;
+        font-size: 18px;
+      }
+
+      .up-arrow {
+        cursor: pointer;
+        position: absolute;
+        right: 105px;
+        width: 30px;
+        opacity: 0.6;
+      }
+
+      hr {
+        color: #000838;
+        position: absolute;
+        top: 115px;
+        right: 55px;
+        width: 120px;
+        border-width: 3px;
+      }
+
+      .down-arrow {
+        cursor: pointer;
+        position: absolute;
+        top: 170px;
+        right: 88px;
+      }
+
+      .step-count {
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        position: absolute;
+        top: 270px;
+        right: 80px;
+
+        span {
+          font-weight: normal;
+          opacity: 0.5;
+        }
       }
     }
   }
@@ -234,6 +311,7 @@ nav {
 
   .our-benefits-desc {
     width: 500px;
+    margin-bottom: 100px;
   }
 
   .view-benefits-btn {
@@ -244,7 +322,6 @@ nav {
       rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     padding: 15px 20px;
     margin-top: 30px;
-    margin-bottom: 300px;
     font-size: 14px;
   }
 
@@ -313,6 +390,30 @@ nav {
         .logo {
           font-size: 48px;
           margin-bottom: 10px;
+
+          img {
+            width: 150px;
+          }
+
+          .client-1 {
+            margin-top: 1px;
+          }
+
+          .client-2 {
+            margin-top: 3px;
+          }
+
+          .client-3 {
+            margin-top: 5px;
+          }
+
+          .client-4 {
+            margin-top: 5px;
+          }
+
+          .client-5 {
+            margin-top: 5px;
+          }
         }
 
         .view-case-study {
@@ -346,6 +447,10 @@ nav {
         font-weight: 600;
         text-align: center;
       }
+    }
+
+    .active {
+      border: 2px solid #ff6b35;
     }
   }
 
@@ -408,6 +513,14 @@ nav {
   background: #3b50cf;
   margin: 50px -280px 0;
   padding: 50px 280px;
+
+  h1 {
+    font-size: 40px;
+  }
+
+  p {
+    margin-bottom: 80px;
+  }
 
   .about-desc {
     text-align: justify;
