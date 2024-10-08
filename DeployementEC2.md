@@ -13,7 +13,7 @@ Title: Deploying Trafycc on AWS EC2 Using Docker
 3. Once the instance is launched, connect to it via SSH:
 
    ```bash
-   ssh -i <${keyname}.pem> ubuntu@<your-ec2-public-ip>
+   ssh -i <${keyname}.pem> ubuntu@<ec2-publicIp>
   This should connect to the ec2 using the terminal.
 ## Step 2: Installed Docker on EC2 
  1. Installed docker using the command
