@@ -34,10 +34,10 @@ Title: Deploying Trafycc on AWS EC2 Using Docker
 
 ## Step 4: Built and Ran the Docker Container on EC2
  1. Build the Docker image using the command -
- 2. ```bash
+    ```bash
     sudo docker build -t ${containername}.
  3. Ran the docker container using the command -
- 4. ```bash
+    ```bash
     sudo docker run -d -p 80:80 ${containername}  .
 
 ## Step 5: Updated Ec2 Security Group for Http  traffic 
