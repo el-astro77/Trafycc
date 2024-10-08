@@ -18,7 +18,7 @@ Title: Deploying Trafycc on AWS EC2 Using Docker
 ## Step 2: Installed Docker on EC2 
  1. Installed docker using the command
     ```bash
-     sudo apt install docker.io -y 
+     sudo apt install docker.io 
  3. Started docker using the command
     ```bash
       sudo systemctl start docker
