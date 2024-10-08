@@ -7,8 +7,8 @@ RUN apt-get update && apt-get install -y nginx
 # Remove the default Nginx HTML files
 RUN rm -rf /var/www/html/*
 
-# Copy the contents of the parent folder to the web server directory
-COPY ../ /var/www/html/
+# Copy your entire project folder to the web server directory
+COPY . /var/www/html/
 
 # Expose port 80 for the web server
 EXPOSE 80
