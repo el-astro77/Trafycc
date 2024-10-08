@@ -32,15 +32,15 @@ Title: Deploying Trafycc on AWS EC2 Using Docker
      "sudo apt install git"
  4. Cloned the git repository from GitHub using the command "git clone ${repositoryname.git}" 
 
-## Step 4: Build and Run the Docker Container on EC2
+## Step 4: Built and Ran the Docker Container on EC2
  1. Build the Docker image using the command -
  2. ```bash
     sudo docker build -t ${containername}.
- 3. Run the docker container using the command -
+ 3. Ran the docker container using the command -
  4. ```bash
     sudo docker run -d -p 80:80 ${containername}  .
 
-## Step 5: Update Ec2 Security Group for Http  traffic 
+## Step 5: Updated Ec2 Security Group for Http  traffic 
  1. In the EC2 instance in the aws management console, updated the security groups by the following inbound rules.
  2. Type: HTTP
     Protocol: TCP
@@ -48,5 +48,5 @@ Title: Deploying Trafycc on AWS EC2 Using Docker
     Source: Anywhere (0.0.0.0/0)
  3. This is done for EC2 instance to allow external access to the web application.
 
-## Step 6 Access The Website
+## Step 6 Accessing The Website
  1. Opened the EC2 instance’s public DNS in the browser. Public Ip -  http://ec2-54-166-236-149.compute-1.amazonaws.com/
